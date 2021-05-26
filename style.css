@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: white;
+    max-width: 220px;
+    margin: 0 auto;
+}
+h2 {
+    color: yellowgreen;
+    text-transform: uppercase;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#container {
+    border-radius: 5px;
+    border-color: yellowgreen;
+    border-style: solid;
+}
