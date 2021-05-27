@@ -11,7 +11,7 @@
 </head>
 <body>
     <!--
-        -------- CALENDAR'S FUNCTIONAL REQUIREMENTS ---------------
+        -------- CALENDAR'S FUNCTIONAL REQUIREMENTS --------------- <-- ANALYSIS
         - show the days inside a proper, monthly, container
         - selection of the day we want to edit
         - show the month + year
@@ -33,7 +33,7 @@
         - the ability to change an existing meeting information
         - email confirmation
         - select a range
-        -------- THINGS WE HAVE TO IMPLEMENT ---------------
+        -------- THINGS WE HAVE TO IMPLEMENT --------------- <-- DESIGN
         -- HTML/CSS ELEMENTS
         - a container for the days
         - the days themselves (dynamically generated)
@@ -63,6 +63,8 @@
         - persist our meetings on the disk
      -->
 
+     <script src="index.js"></script>
+
      
     <h1>Strive Calendar</h1>
 
@@ -78,6 +80,21 @@
         <div class="day">7</div>
         <div class="day">8</div>
         <div class="day">9</div>
+        <div class="day" onclick="selectDay(event)">10</div>
+    </div>
+
+    <div id="meetings-container">
+        <h2>Meetings</h2>
+
+        <div id="meeting-creation">
+            <input type="time" id="meeting-time" value="09:00" />
+            <input type="text" id="meeting-description" placeholder="insert description" />
+            <input type="button" value="Create" onclick="createMeeting(event)">
+        </div>
+
+        <ul id="meetings-list">
+            <!-- Meetings will be shown here -->
+        </ul>
     </div>
 </body>
 </html>
