@@ -1,23 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strive Calander</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Strive Calendar</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!--
-        -**-- HTML/CSS Element
-        - A container for the days
-        -
+        -------- CALENDAR'S FUNCTIONAL REQUIREMENTS ---------------
+        - show the days inside a proper, monthly, container
+        - selection of the day we want to edit
+        - show the month + year
+        - show day of the week
+        - let the user choose a time for a new meeting
+        - let the user choose a description for a new meeting
+        - let the user click a button to add a new meeting
+        - display the assigned meetings for the selected day
+        - have a different style for days that have some meetings
+        - add some buttons to move to previous/next month
+        - save our meetings so they won't be lost when we refresh the page
+        - create proper styling rules to improve the look and feel of our calendar
+        - style today differently
+        -- NICE TO HAVE
+        - also consider attendee's emails when creating a meeting
+        - also consider different event types (birthdays...)
+        - add an alert capability
+        - check for overlapping meetings
+        - the ability to change an existing meeting information
+        - email confirmation
+        - select a range
+        -------- THINGS WE HAVE TO IMPLEMENT ---------------
+        -- HTML/CSS ELEMENTS
+        - a container for the days
+        - the days themselves (dynamically generated)
+        - section to create a new meeting (inputs for description, time, 'create meeting button')
+        - prev/next month button
+        - container for displaying selected day's meetings
+        - a different style for the selected day
+        - a different style for today
+        - a different style for days that has some planned meetings
+        -- FUNCTIONS
+        - knowing how many days we have in the selected month
+        - create how many day-boxes we need to show in our calendar according to the previous function
+        --- ensure that when we create the 'today' box it will be styled differently
+        - knowing the current month
+        - move the the prev/next month
+        - create a new meeting
+        --- collect input from the user
+        --- organise those inputs into a meaningful entity ('meeting')
+        --- display the new meeting info in the meetings list
+        --- it should store this entity somewhere to be able to show the list of meetings again 
+            when I click on this same day again
+        - display selected day's meetings
+        - select the day I want to interact with (to view meetings or add more) 
+        - display proper month/year
+        - knowing the day of the week
+        - style differently a day that has meetings
+        - persist our meetings on the disk
+     -->
 
-    -->
-    <h2>Strive Calander</h2>
-    <div id="container">
-        hi
-        ye
+     
+    <h1>Strive Calendar</h1>
+
+    <div id="month-container">
+        <!-- Days will be created inside here -->
+            
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
     </div>
 </body>
 </html>
